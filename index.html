@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- //making the viewpoint adjust for ant type of devise -->
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<title> Ghada alghamdi Personal website</title>
+ <!-- // adding a title for the web name -->
+<link rel="stylesheet" href="css/styles.css"> 
+<!-- //linking css and js -->
+</head>
+<body>
+    <div class="nav" style="background-color: #cee9d4;"> 
+        <!-- //adding the backgroun image -->
+        <h2>Ghada Alghamdi</h2>
+        <div id="btn"> 
+        <!-- // a bloke to use flec boxs and move the btn to the opesite side from the h1 -->
+        <!-- //links to move around the page -->
+        <a href="#about_me">About</a>
+        <a href="#box-model">Projucts</a>
+        <a href="#Contact">Contact</a>
+        <!-- //adding a link for my linkdein page -->
+        <a href="https://www.linkedin.com/in/ghdah-alghamdi-164294276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Linkedin</a>
+        </div>
+    </div>
+        <section id="about_me">
+         <img src="assets/images/profile.png" alt="Profaile photo" width="200px" height="150px">
+          <!-- //puting the profile img -->
+        <h1>About Me</h1>
+        <!-- // an introuduction -->
+        <P>I am a junior Computer Science student at KFUPM <br>with a strong passion for technology and continuous learning. <br>I am constantly seeking new challenges and opportunities that allow me to <br>enhance my technical skills, broaden my knowledge, and apply what I learn<br> in practical, real-world scenarios. My goal is to keep growing both academically <br>and professionally while contributing to innovative projects in the technology field.</P>
+        </section>
+    <!-- // makeing abox mode to have my proujucts (for the outer format) -->
+     <section id="box-model" class="card"> 
+     <h1>Projects:</h1>
+      <div class="fillter_btn"><!-- adding the buttons to allow the user to choose a project catagorue (each button has a data name of the catagoure)-->
+            <button id="all" class="all" data-name="all"> All Projucts</button>
+            <button id="Web_Devalpment" data-name="Web_Devalpment">Web Devalpment</button>
+            <button id="Hardwarye_Design" data-name="Hardwarye_Design">Hardwarye Design</button>
+            <button id="System" data-name="System">System</button>
+        </div>
+        <br>
+     <div class="box-row">
+          <!-- //deviding them to 3 boxses each contine img title and description  and data name of the type of the projuect to use in fillter -->
+            <div class="box b1" data-name="Hardwarye_Design"> 
+                <img src="assets/images/CPU.png" alt="CPU" width="200px" height="80px">
+                <h3>Bulding a CPU</h3>
+                <p>Designed and implemented a basic CPU from scratch, focusing on the core components such as the control unit, ALU, registers, and memory interactions.</p>
+            </div>
+            <div class="box b2" data-name="Web_Devalpment">
+                <img src="assets/images/Event.png" alt="EMA" width="150px" height="100px">
+                <h3>Event mangment App</h3>
+                <p>Developed a user-friendly application that streamlines the process of planning and managing events.</p>
+            </div>
+            <div class="box b3" data-name="System">
+                <img src="assets/images/Gogreen.png" alt="GoGrren app" width="150px" height="100px">
+                <h3>GoGrren app</h3>
+                <p>Developed a mobile application that helps users identify the “greenest” paths in their city by analyzing environmental factors such as air quality</p>
+            </div>
+        </div>
+        </section>
+         <section id="Contact">
+            <form action="#" method="post" class="card2"><!-- creating a forme and makeing the class card2 for the outeer format (in css)-->
+                <h2>Contact Me:</h2>
+                <label for="name">Enter your name: </label>
+                <!-- //the Quation -->
+                <input id="name" name="name" type="text" placeholder="Name" required><br>
+                <!-- //creating a space to put the answer and required for validation -->
+                <label for="email">Enter your email: </label>
+                <!-- //the Quation -->
+                <input id="email" name="email" type="email" placeholder="Email" required><br>
+                <!-- //creating a space to put the answer and making the type emaile and required for validation  -->
+                <div id="message_block">
+                    <label for="message">Your message:</label><br>
+                    <!-- //the Quation -->
+                     <textarea id="message" name="message" rows="6" required></textarea>
+                     <!-- //creating a space to put the answer but here i'm also adding rows to make the text box bigger
+                      and required for validation -->
+                </div>
+                <button type="submit" id="submite">Submit</button> 
+                <!-- // making a button with the type submit for the form -->
+            </form>
+        </section>
+        <hr>
+        <section>
+        <br>
+        <div class="box-row">
+            <div class="box b4"> 
+                <h2>Cats facts for cat lovers 🐱:</h2>
+                <p id="fact" style="margin-top:15px; color:#3a5246;"></p> <!-- making the <p> that i will change insaide JS with data from public API-->
+                <p style="color:#b2c8b7;">Click the button to see a random cat fact every time.</p>
+                <button id="cat">Meow</button>
+            </div>
+        </div>
+        </section>
+        <script src="js/script.js" defer></script>
+</body>
+</html>
+
 
