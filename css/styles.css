@@ -278,5 +278,9 @@ div > p, h2 { color: inherit; }
   color: #395748;
   font-size: 1rem;
 }
+#show1:hover,#show2:hover,#show3:hover{
+background: #dbeee0;
+color: #395748;
+}
 
 

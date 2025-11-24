@@ -70,3 +70,23 @@ document.querySelector(".fillter_btn2").addEventListener("change", (e) => {
   }
 });
 
+const but1 =document.getElementById("show1");
+const message1=document.getElementById("Discraption")
+const but2 =document.getElementById("show2");
+const message2=document.getElementById("Discraption2")
+const but3 =document.getElementById("show3");
+const message3=document.getElementById("Discraption3")
+
+function show_message(message1,btn) {
+    if( message1.classList=="hide"){
+      message1.classList.remove("hide");
+    btn.innerHTML="hide Discraption"
+}
+    else{
+        message1.classList.add("hide");
+        btn.innerHTML="show Discraption"
+    }
+}
+but1.addEventListener("click", function(){show_message(message1,but1)})
+but2.addEventListener("click", function(){show_message(message2,but2)})
+but3.addEventListener("click", function(){show_message(message3,but3)})
