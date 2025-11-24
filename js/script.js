@@ -49,3 +49,24 @@ fetch("https://meowfacts.herokuapp.com/")
 
 });
 
+//programing the fillter btn
+
+const items = document.querySelectorAll(".box2");
+
+function filterProjects(type) {
+  items.forEach(el => {
+    const level = el.getAttribute("data-name");
+    if (type === "all" || level === type) {
+      el.classList.remove("hide");
+    } else {
+      el.classList.add("hide");
+    }
+  });
+}
+
+document.querySelector(".fillter_btn2").addEventListener("change", (e) => {
+  if (e.target.name === "level") {
+    filterProjects(e.target.value);
+  }
+});
+
