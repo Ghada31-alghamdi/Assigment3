@@ -300,5 +300,12 @@ div > p, h2 { color: inherit; }
 background: #dbeee0;
 color: #395748;
 }
-
+#them{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#them-btn svg:last-child{
+  display:none;
+}
 
