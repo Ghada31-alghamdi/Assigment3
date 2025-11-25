@@ -90,3 +90,23 @@ function show_message(message1,btn) {
 but1.addEventListener("click", function(){show_message(message1,but1)})
 but2.addEventListener("click", function(){show_message(message2,but2)})
 but3.addEventListener("click", function(){show_message(message3,but3)})
+
+
+let darkmode=localStorage.getItem("darkmode")
+const them_btn=document.getElementById("them-btn")
+
+const doDarkmode=()=>{
+  document.body.classList.add("darkmode")
+  localStorage.setItem("darkmode","on")
+}
+const noDarkmode=()=>{
+  document.body.classList.remove("darkmode")
+  localStorage.setItem("darkmode",null)
+}
+if(darkmode==="on"){
+  doDarkmode()
+}
+them_btn.addEventListener("click", ()=>{
+  darkmode=localStorage.getItem("darkmode")
+  darkmode!=="on"?doDarkmode():noDarkmode();
+})
