@@ -2,6 +2,17 @@ const date =new Date();//creating a date object to get today date
 alert("Welcome to Ghada Protfile The Date is: "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear());
 //using alert to show a pop up messige contining welcome and the date using 
 //date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear() methods
+let logedIn=localStorage.getItem("logedIn")
+let userName=localStorage.getItem("Name")
+if(logedIn!=="yes"){
+  localStorage.setItem("logedIn","yes")
+  userName=window.prompt("What is your Name?")
+  localStorage.setItem("Name",userName)
+}
+alert("Welcome "+userName);
+
+
+
 
 // get the the button from the html file
 const button1 =document.getElementById("all");
