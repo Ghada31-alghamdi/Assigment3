@@ -39,5 +39,13 @@ It also includes a fun **Random Cat Facts Generator**, because I love cats! 🐱
 This project is available on GitHub.
 You can clone the repository, open it in any HTML code editor, and run it locally in your browser.
 
-## summary of AI use
-AI tool were used to debage code, enhance functionality and design, provide advaises, and improve overall design and readability. They also helped generate and refine written content, such as descriptions and text for the website.
+## 🤖 Summary of AI Use
+
+AI tools were used throughout this project to:
+
+- Debug and fix code issues  
+- Enhance functionality and overall design  
+- Provide advice, guidance, and best practices   
+- Generate and refine written content, including website text and descriptions  
+
+AI assistance helped streamline development and improve the website’s overall quality, usability, and user experience.
