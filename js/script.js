@@ -2,14 +2,14 @@ const date =new Date();//creating a date object to get today date
 alert("Welcome to Ghada Protfile The Date is: "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear());
 //using alert to show a pop up messige contining welcome and the date using 
 //date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear() methods
-let logedIn=localStorage.getItem("logedIn")
-let userName=localStorage.getItem("Name")
-if(logedIn!=="yes"){
+let logedIn=localStorage.getItem("logedIn")//accsising local storege to cheke logedin
+let userName=localStorage.getItem("Name")// if loged in get name
+if(logedIn!=="yes"){//if not loged in get name and save it and change loged in to yes to keep the same name
   localStorage.setItem("logedIn","yes")
   userName=window.prompt("What is your Name?")
   localStorage.setItem("Name",userName)
 }
-alert("Welcome "+userName);
+alert("Welcome "+userName);//a welcome message
 
 
 
@@ -60,10 +60,9 @@ fetch("https://meowfacts.herokuapp.com/")
 
 });
 
-//programing the fillter btn
 
+//for failtiring based on cliked raido btn 
 const items = document.querySelectorAll(".box2");
-
 function filterProjects(type) {
   items.forEach(el => {
     const level = el.getAttribute("data-name");
@@ -74,13 +73,13 @@ function filterProjects(type) {
     }
   });
 }
-
+//if any of the raido btn are clicked enter the function to fillter
 document.querySelector(".fillter_btn2").addEventListener("change", (e) => {
   if (e.target.name === "level") {
     filterProjects(e.target.value);
   }
 });
-
+//geting the btn and Discraption paragraph
 const but1 =document.getElementById("show1");
 const message1=document.getElementById("Discraption")
 const but2 =document.getElementById("show2");
@@ -88,35 +87,39 @@ const message2=document.getElementById("Discraption2")
 const but3 =document.getElementById("show3");
 const message3=document.getElementById("Discraption3")
 
+//in the function we will either hide or show the message based on the current state (we also change the btn message) 
 function show_message(message1,btn) {
     if( message1.classList=="hide"){
       message1.classList.remove("hide");
-    btn.innerHTML="hide Discraption"
+    btn.innerHTML="Hide Discraption"
 }
     else{
         message1.classList.add("hide");
-        btn.innerHTML="show Discraption"
+        btn.innerHTML="Show Discraption"
     }
 }
-but1.addEventListener("click", function(){show_message(message1,but1)})
+but1.addEventListener("click", function(){show_message(message1,but1)})//entiring the function for each btn  
 but2.addEventListener("click", function(){show_message(message2,but2)})
 but3.addEventListener("click", function(){show_message(message3,but3)})
 
-
+//dark and light mode
 let darkmode=localStorage.getItem("darkmode")
 const them_btn=document.getElementById("them-btn")
-
+//to change the page style to dark by adding a new class to the body called darkmode also saving changes
 const doDarkmode=()=>{
   document.body.classList.add("darkmode")
   localStorage.setItem("darkmode","on")
 }
+//to change the page style to light by removing darkmode also saving changes
 const noDarkmode=()=>{
   document.body.classList.remove("darkmode")
   localStorage.setItem("darkmode",null)
 }
+//to apply the dark mode if it is the defualt
 if(darkmode==="on"){
   doDarkmode()
 }
+//if statment to choose betwwen the two functions when a btn is clicked
 them_btn.addEventListener("click", ()=>{
   darkmode=localStorage.getItem("darkmode")
   darkmode!=="on"?doDarkmode():noDarkmode();

@@ -1,4 +1,5 @@
 # AI Uasage report
+
 ## Tools used
 1- ChatGPT5
 # Use Cases
@@ -13,10 +14,8 @@ AI tools were use throughout the project to enhance development efficiency and i
 - **Troubleshooting Light and Dark Mode implementation**  
   AI provided solutions for theme-switching logic, color contrast adjustments, and resolving styling issues related to both modes.
 
-
 ## Benefits & challenges
 ### Benefits:
-
 * Helped speed up development by  improving code efficiently.
 
 * Provided creative suggestions for text and layout design.
